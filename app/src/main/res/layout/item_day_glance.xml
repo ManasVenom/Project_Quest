@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/glance_bg"
+    android:paddingTop="20sp"
+    android:paddingLeft="20sp"
+    android:paddingRight="20sp"
+    android:paddingBottom="12sp"
+    android:layout_marginRight="12sp"
+    app:circularflow_radiusInDP="20sp">
+    <ImageView
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:src="@drawable/book_stack"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:textColor="?attr/colorPrimary"
+        android:text="Study"
+        android:fontFamily="@font/quantico"
+        android:textSize="16sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2 Hrs"
+        android:textColor="?attr/colorPrimary"
+        android:fontFamily="@font/quantico"
+        android:textSize="14sp"/>
+
+</LinearLayout>

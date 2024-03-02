@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10sp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/top_layout"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/profile_pic"
+                    android:layout_width="35sp"
+                    android:layout_height="35sp"
+                    android:layout_marginRight="15sp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/images" />
+
+                <TextView
+                    android:id="@+id/greeting_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/greeting"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="24sp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/quantico"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/notification_button"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:src="@drawable/ic_notifications"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_motivation"
+                android:padding="35sp"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:text="Winners never quit,\nand quitters never win."
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:fontFamily="@font/quote"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="Day at a Glance"
+                android:textColor="?attr/colorOnSurface"
+                android:textStyle="bold"
+                android:fontFamily="@font/quantico"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_day_glance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:orientation="horizontal"
+                android:padding="8sp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_day_glance" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="Upcoming Quests"
+                android:textColor="?attr/colorOnSurface"
+                android:textStyle="bold"
+                android:fontFamily="@font/quantico"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_u_quests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:padding="8sp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_uquest" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="Assignments"
+                android:textColor="?attr/colorOnSurface"
+                android:textStyle="bold"
+                android:fontFamily="@font/quantico"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_assignments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:padding="8sp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_assignment"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="Events"
+                android:textColor="?attr/colorOnSurface"
+                android:textStyle="bold"
+                android:fontFamily="@font/quantico"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_events"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:padding="8sp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_events"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
