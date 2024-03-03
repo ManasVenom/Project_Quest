@@ -25,10 +25,10 @@ public class SplashActivity extends AppCompatActivity {
         context = this;
         userdata = context.getSharedPreferences(getString(R.string.userdata_file), Context.MODE_PRIVATE);
 
-        String log = userdata.getString("loggedin", "fals");
+        String log = userdata.getString("loggedin", "false");
 
         if(log=="false") {
-            Intent i = new Intent(this, LoginActivity.class);
+            Intent i = new Intent(this, SetupActivity.class);
             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(i);
         } else {
